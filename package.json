@@ -1,0 +1,34 @@
+{
+  "name": "lang-ko-visualization",
+  "version": "0.0.1",
+  "description": "한글 문장에 대한 감정분석과 시각화",
+  "main": "index.js",
+  "dependencies": {
+    "@google-cloud/language": "^3.5.1",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "http-status": "^1.4.0",
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "server-start": "nodemon app",
+    "start": "export GOOGLE_APPLICATION_CREDENTIALS=./GCP-key.json && nodemon app",
+    "dev": "export GOOGLE_APPLICATION_CREDENTIALS=./GCP-key.json && export PORT=3000 && nodemon app",
+    "test": "export PORT=3000 && jest --verbose --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doong-jo/lang-ko-visualization.git"
+  },
+  "author": "Sungdong Jo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doong-jo/lang-ko-visualization/issues"
+  },
+  "homepage": "https://github.com/doong-jo/lang-ko-visualization#readme"
+}

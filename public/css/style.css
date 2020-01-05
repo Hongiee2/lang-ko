@@ -1,0 +1,26 @@
+.main {
+    padding: 1rem;
+}
+
+.sentence-input {
+    width: 100%;
+    min-height: 10rem;
+}
+
+.result-area {
+    white-space: pre;
+}
+
+.result-loading {
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem;
+}
+
+.result-loading.show {
+    display: inline-block;
+}
+
+.result-loading.hidden {
+    display: none;
+}
