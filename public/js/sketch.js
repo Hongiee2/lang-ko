@@ -1,9 +1,10 @@
 const inputStr =
-  "파란 하늘. 파란 하늘 꿈이 드리운 푸른 언덕에. 아기 염소 여럿이. 풀을 뜯고 놀아요.";
+  "(간주). 강변살자. 엄마가 섬그늘에 굴따러가면. 아이는 혼자남아. 집을보다가. 바다가 들려주는 자장노래에. 팔베고 스르르르 잠이듭니다. (간주). 아기는 잠을곤히 자고있지만. 갈매기 울음소리 맘이설레어. 다못찬 굴바구니 머리에이고. 엄마는 고갯길을 달려옵니다.";
 let resultValue = "Loading...";
 
-let resultScore = [];
-let resultMag = [];
+let lyrics_list = [];
+let Score_list = [];
+let Mag_list = [];
 let resultLen;
 let time = 0;
 let i = 0;
@@ -54,9 +55,10 @@ function setup() {
       result = myJson.sentences;
       resultLen = result.length;
 
-      for (let i = 0; i < result.length; i++) {
-        append(resultScore, result[i].score);
-        append(resultMag, result[i].resultMag);
+      for (var i = 0; i < result.length; i++) {
+        append(lyrics_list, result[i].sentence);
+        append(Score_list, result[i].score);
+        append(Mag_list, result[i].magnitude);
       }
     });
 
@@ -98,9 +100,10 @@ function draw() {
   strokeWeight(2);
   fill(0);
   textAlign(LEFT);
-  text(i + 1 + "번째 문장. " + spaceData.sentence[i].내용, 20, 50);
-  text("2. 감정 : " + spaceData.sentence[i].감정, 20, 100);
-  text("3. 시간 : " + counter + " 초", 20, 150);
+  text(i + 1 + "번째 문장. " + lyrics_list[i], 20, 50);
+  text("2. Score: " + Score_list[i], 20, 100);
+  text("3. magnitude : " + Mag_list[i], 20, 150);
+  text("4. 시간 : " + counter + " 초", 20, 200);
 
   if (counter > 140) counter = 1;
 
