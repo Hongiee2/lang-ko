@@ -80,7 +80,7 @@ function draw() {
   for(var a=0;a<10;a++)
   {
     if(spaceData.sentence[a].시간<=counter && counter<=spaceData.sentence[a].시간+spaceData.sentence[a].길이)
-    {
+    {   //가사 시작시간 <= counter && counter
       i=a;
       break;
     }
