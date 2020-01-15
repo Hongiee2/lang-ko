@@ -1,16 +1,36 @@
-function emotion(Score){
-    if(Score<-0.2){
-    senten("happy");
-    smile();
-    }
-    else if(Score<0.2){
-    senten("sad");
-    sad();
-    }
-    else{
-    senten("normal");
-    nothing();
-    }
+function Draw_Emotion(state){
+switch(state){
+    case 'sad':
+      console.log('슬픔');
+      senten("sad");
+      sad();
+      break;
+
+    case 'verysad':
+      console.log('개슬픔');
+      break;
+
+    case 'neutral':
+      console.log('중립');
+      senten("normal");
+      nothing();
+//      smile();
+      break;
+
+    case 'contrary_neutral':
+      console.log('대립적 중립');
+      break;
+
+    case 'good':
+      senten("happy");
+      smile();
+      console.log('좋음');
+      break;
+
+    case 'very_good':
+      console.log('개좋음');
+      break
+  }
 }
 
 function smile()

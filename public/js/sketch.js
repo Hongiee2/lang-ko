@@ -10,6 +10,8 @@ let time = 0;
 let i = 0;
 let lyrics;
 
+let state = null;
+
 let timer;
 let counter = 0;
 
@@ -94,7 +96,8 @@ function draw() {
     }
   }
 
-  emotion(spaceData.sentence[i].감정);
+  Update_State(Score_list[i], Mag_list[i]);
+  Draw_Emotion(state);
 
   stroke(0);
   strokeWeight(2);
