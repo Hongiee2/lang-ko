@@ -18,7 +18,7 @@ function Update_State(Score, Magnitude){
   }
 
   if (Score<=(-0.5)&&Magnitude>=5) {
-    state='verysad';
+    state='very_sad';
   }
 
   if (Score<=(-0.5)&&Magnitude<5) {
